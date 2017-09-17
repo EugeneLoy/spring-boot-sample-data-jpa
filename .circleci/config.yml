@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: maven:3.5.0-jdk-8
+      - image: postgres:9.6
+    working_directory: ~/repo
+
+    environment:
+      # Customize the JVM maximum heap limit
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
+
+    steps:
+      - checkout
+      - run: mvn test
