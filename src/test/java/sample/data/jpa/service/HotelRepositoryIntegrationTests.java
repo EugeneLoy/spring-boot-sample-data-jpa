@@ -41,6 +41,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@org.junit.Ignore
 public class HotelRepositoryIntegrationTests {
 
 	@Autowired
